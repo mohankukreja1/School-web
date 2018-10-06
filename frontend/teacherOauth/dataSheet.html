@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Data Sheet | Teacher Dashboard</title>
+		<style>
+			footer {
+/*			position:fixed;*/
+			bottom:0rem;
+			width:100%;
+			background:#6cf;
+			}
+			main{
+			min-height: 100%;
+			}
+			.header {
+			color: lightskyblue;
+			font-weight: 300;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="light-blue lighten-2">
+				<div class="nav-wrapper container">
+                    <img src = "images/logoWhite.png" style="height: 64px;">
+
+
+
+					<a href="teacherDashboard.html" class="brand-logo" style="font-size:1.5em">Focado Teacher Dashboard</a>
+
+					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li>
+							<a href="#" class="name"></a>
+						</li>
+						<li>
+							<a class="waves-effect waves-teal btn-flat" style="color:#fff" href="/logout"><b>Sign Out</b></a>
+						</li>
+
+					</ul>
+				</div>
+			</nav>
+<!--
+			<ul class="sidenav" id="mobile-demo">
+				<li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+				<li><a href="collapsible.html">Javascript</a></li>
+				<li><a href="mobile.html">Mobile</a></li>
+			</ul>
+-->
+        </header>
+        <main>
+			<div class="container" style="margin-top:1%">
+				<div id="login-page" class="row">
+
+					<div class="col student-data-input-1 m8 offset-m2 s12 z-depth-2 card-panel" >
+						<form class="data-form" style="padding: 0 0.75rem" action="" method="post" enctype="multipart/form-data">
+
+							<div class="row">
+								<div class="input-field col s12 center">
+									<img src="images/logo.png" alt="" class="circle responsive-img valign profile-image-login">
+									<h5 class="center login-form-text">Data Sheet</h5>
+                                    <h6>Enter Exam and Class details</h6>
+								</div>
+							</div>
+							<div class="row margin">
+								  <div class="input-field col s12">
+                                    <select class="exam-name" name="exam-name">
+                                      <option value="" disabled selected>Choose your option</option>
+                                    </select>
+                                    <label>Choose Examination</label>
+                                  </div>
+                                <div class="input-field col s12">
+                                    <select id="classes" name="class">
+                                      <option value="" disabled selected>Choose your option</option>
+                                    </select>
+                                    <label>Choose Class</label>
+                                  </div>
+																	<div class="input-field col s12">
+	                                    <select class="subjects" name="subjects">
+	                                      <option value="" disabled selected>Choose your option</option>
+	                                    </select>
+	                                    <label>Choose Subject</label>
+	                                  </div>
+							</div>
+							<div class="row"  style="margin-bottom:0">
+								<div class="input-field col s12 ">
+									<input type="submit" class="btn col s12 blue-grey darken-1 accent-2 data-btn-1" value="Submit">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row student-data-input-2" style="display:none">
+					<div class="col offset-m1 m10  s12">
+						<div id="highlight" class="section scrollspy">
+							<h3 class="header subject-name">Subject: <span class="subject-name-span"></span></h3>
+							<div class="row">
+								<div class="col s12">
+									<form class="data-form" action="/uploadMarks" method="post">
+										<table class=" data-list highlight responsive-table">
+											<thead>
+												<tr>
+													<th>S No.</th>
+													<th>Name of Student</th>
+													<th>Enter Marks</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+										</table>
+                                        <input type="text" name="class" class="class-name-input" style="display:none">
+                                        <input type="text" name="examName" class="exam-name-input" style="display:none">
+										<input type="text" name="subject" class="subject-name-input" style="display:none">
+										<div class="row"  style="margin-bottom:0">
+											<div class="input-field col m4 offset-m8 s12 ">
+												<input type="submit" class="btn col s12 blue-grey darken-1 accent-2" value="Submit">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </main>
+        <footer class="page-footer light-blue lighten-2">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 ">
+						<h5 class="white-text">Focado</h5>
+						<p class="grey-text text-lighten-4">Lorem Ipsum Dolor Sit Amet.</p>
+					</div>
+					<div class="col l4 offset-l2">
+						<h5 class="white-text">Links</h5>
+						<ul>
+							<li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+							<li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2018 Copyright
+				</div>
+			</div>
+		</footer>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('select').formSelect();
+	});
+
+		var examData;
+		$.ajax({
+		url: '/getExams',
+		type: 'GET',
+		success: function(data){
+					examData = data;
+					console.log(data);
+					for(i in data){
+						if(data[i].length!=0)
+							$(".exam-name").append("<option>"+i+"</option>")
+					}
+					$('.exam-name').formSelect();
+
+				}
+			})
+			$.ajax({
+			url: '/getSubject',
+			type: 'GET',
+			success: function(data){
+				for(i in data){
+					$(".subjects").append("<option>"+data[i]+"</option>")
+				}
+				$('.subjects').formSelect();
+
+					}
+				})
+			$('.exam-name').change(function(){
+				var class2 = examData[$(this).val()];
+				$('#classes').empty();
+				for(i in class2){
+					$("#classes").append("<option>"+class2[i]+"</option>")
+				}
+				$('#classes').formSelect();
+			})
+
+			$('.data-btn-1').click(function(e){
+				e.preventDefault()
+				$('.student-data-input-1').toggle()
+				$('.student-data-input-2').toggle()
+
+				data = {
+					examName: $(".exam-name").val(),
+					class: $("#classes").val(),
+					subject: $(".subjects").val()
+				}
+				$('.subject-name-span').text($(".subjects").val());
+				$('.subject-name-input').val($(".subjects").val());
+				$('.exam-name-input').val($(".exam-name").val());
+				$('.class-name-input').val($("#classes").val());
+
+				$.ajax({
+				url: '/dataUpload',
+				type: 'POST',
+				data:data,
+				success: function(data){
+					k=1;
+					$('.subject-name').val(data["subject"]);
+
+					for(i in data){
+						console.log(data[i]);
+						var str="<td>" + k + "</td>"
+						str+="<td>" + data[i].nameStudent + "</td>"
+						str+=`<td><input id="username" type="number" name="${data[i].id}" placeholder="Enter Marks"></td>`
+
+						$('.data-list tbody').append(`<tr>${str}</tr>`);
+
+						k++
+					}
+
+
+
+						}
+					})
+
+			})
+    </script>
+    </body>
+
+</html>
